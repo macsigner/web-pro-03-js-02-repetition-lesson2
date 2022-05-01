@@ -1,0 +1,40 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<script>
+    /* Aufgabe:
+     * a) Verwandle den Satz in ein Array von Wörtern (ohne abstände in den Wörtern).
+     * b) Gib das Alphabet von der Variable alphabet in Kleinbuchstaben aus.
+     * c) Gib die Länge des Alphabets aus.
+     * d) Beschneide die Variable Alphabet so, dass nur noch EFGH ausgegeben wird.
+     *
+    */
+    var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    var satz = "Fritz jagt im völlig verwarlosten Auto durch die Stadt";
+
+
+    // a)
+    let arrWords = satz.split(' ');
+    console.log('a)');
+    console.log(arrWords);
+
+    // b)
+    console.log('b)');
+    console.log(alphabet.toLowerCase());
+
+    // c)
+    console.log('c)');
+    console.log(alphabet.length);
+
+    // d)
+    let cutAlphabet = alphabet.substring(4, 8);
+    console.log('d)');
+    console.log(cutAlphabet);
+
+</script>
+</body>
+</html>
+
+

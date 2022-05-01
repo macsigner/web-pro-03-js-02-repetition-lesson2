@@ -1,0 +1,52 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<script>
+    'use strict';
+    /* Aufgabe:
+     * a) Bau eine Funktion, genannt rechner(rechnungsFunktion, array) welche 2 Parameter akzeptiert.
+          Der erste Parameter soll eine beliebige funktion sein, wie z.B. summe, durchschnitt, maximum.
+          Diese funktion, soll dann auf den zweiten Parameter durchgeführt werden, so dass das Resultat zurückgegeben werden kann.
+          Die Funktionen summe, durchschnitt und maximum musst du ebenfalls implementieren.
+     *    Beispiel:
+            var zahlen = [1,2,3,4,5,6];
+
+            console.log(rechner(summe, zahlen)) => 21
+            console.log(rechner(durchschnitt, zahlen)) => 3.5
+            console.log(rechner(maximum, zahlen)) => 6
+    */
+
+    var zahlen = [1, 2, 3, 4, 5, 6];
+
+    // a)
+    console.log('a)');
+
+    let summe = function(numbers) {
+        return numbers.reduce((previous, current) => previous + current);
+    };
+
+    let durchschnitt = function(numbers) {
+        let sum = summe(numbers);
+
+        return sum / numbers.length;
+    }
+
+    let maximum = function(numbers) {
+        return Math.max(...numbers);
+    }
+
+    let rechner = function(fn, numbers) {
+        return fn.call(this, numbers);
+    };
+
+    console.log(rechner(summe, zahlen));
+    console.log(rechner(durchschnitt, zahlen));
+    console.log(rechner(maximum, zahlen));
+
+</script>
+</body>
+</html>
+
+
